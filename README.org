@@ -1,0 +1,46 @@
+:PROPERTIES:
+:CREATED: [2024-08-28 Wed 17:00]
+:MODIFIED: [2024-08-28 Wed 19:33]
+:END:
+
+#+title: Jouyou Anki Deck
+#+author: Connor Clark
+#+email: connor@psyleft.com
+
+Simple Anki deck for jouyou kanji
+
+* About
+This repository contains the python script I used to generate my Anki deck containing flashcards for the 2136 jouyou kanji.
+
+My goal with this deck was to create simple, good-looking kanji flashcards without a ton of extra information. This deck does NOT contain information on RTK or any other mnemonic systems, but does contain information about the keisei radicals. The deck is ordered based on the frequency of each kanji in the Mainichi Sinbun, as provided by the Kanji Database. You can optionally display stroke orders on the answer side of the cards by downloading and installing the KanjiStrokeOrders font [[https://www.nihilist.org.uk][here]].
+
+* Resources
+The data used to generate the deck comes from three sources: the online [[https://www.kanjidatabase.com][Kanji Database]] and the [[https://github.com/scriptin/jmdict-simplified][jmdict-simplified]] versions of JMdict and Kanjidic2. If you want to build the deck yourself you can download the relevant files from the links above. Place them in the =resources/external/= folder under the correct names as specified in =main.py=.
+
+For the Kanji Database, you can access the correct file by choosing "SQL query" at the top of the webpage and pasting the following query into the text box:
+
+#+begin_src sql
+SELECT `id`,`Kanji`,`Strokes`,`Grade`,`Kanji Classification`,`JLPT-test`,`Name of Radical`,`Kanji Frequency without Proper Nouns` FROM `KanjiTable`
+#+end_src
+
+Then, submit the query and click "Export Kanji as CSV" at the bottom of the page. It's worth noting that this file has a BOM at the beginning, which python doesn't like. You can easily fix this if you have vim/vi by opening the file and executing the following command:
+
+#+begin_src
+:set nobomb
+#+end_src
+
+Make sure to save the file afterwards.
+
+Kanjidic2 is used for the kanji meaning and readings. JMdict is used only for the example words. Every thing else, including the list of jouyou kanji itself, comes from the Kanji Database.
+
+* Running
+To run the script, make sure you have python installed. Create and activate a venv if you prefer, and run ~pip install genanki~ to install [[https://github.com/kerrickstaley/genanki][genanki]], the only other dependency. Make sure you have added the external resources as outlined [[#Resources][above]]. Then, simply run ~./main.py~ and everything should work. The resulting deck file will be written to ~out.apkg~.
+
+* Screenshots
+
+[[./images/question.png]]
+
+[[./images/answer.png]]
+
+* Reasoning
+I would like to expand upon the reasoning behind this deck. I have been a user of WaniKani for multiple years, and got about halfway throught the program. While I appreciate the service, I have come to dislike the concept of mnemonic-based learning for kanji in general. While that method works for a lot of people, I personally feel as if I rarely encountered situations where the mnemonic helped me remember a kanji I otherwise wouldn't have. The mnemonic system also completely ignores keisei formation, which accounts for the majority of kanji. These formations are the actual sematic connections between different kanji, and it seems counterintuitive to ignore these legitimate connections for false ones created solely for brute-force memorization. Also, by not learning the traditional names and types of kanji radicals, it impedes ones ability to discuss kanji with native speakers, or in Japanese in general. For all these reasons, I have decided to abandon mnemonic systems for learning kanji and switch to simpler methods while reinforcing kanji readings through actual encounters with the kanji in native material.

@@ -1,0 +1,13 @@
+.card {
+    font-family: Noto Sans JP;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+@font-face {
+    font-family: stroke-orders;
+    src: local(KanjiStrokeOrders);
+    size-adjust: 200%
+}
