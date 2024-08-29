@@ -33,14 +33,16 @@ Make sure to save the file afterwards.
 
 Kanjidic2 is used for the kanji meaning and readings. JMdict is used only for the example words. Every thing else, including the list of jouyou kanji itself, comes from the Kanji Database.
 
-* Running
-To run the script, make sure you have python installed. Create and activate a venv if you prefer, and run ~pip install genanki~ to install [[https://github.com/kerrickstaley/genanki][genanki]], the only other dependency. Make sure you have added the external resources as outlined [[#Resources][above]]. Then, simply run ~./main.py~ and everything should work. The resulting deck file will be written to ~out.apkg~.
+* Usage
+To use the script, make sure you have Python 3 installed. Create and activate a venv if you prefer, and run ~pip install genanki~ to install [[https://github.com/kerrickstaley/genanki][genanki]], the only other dependency. Make sure you have added the external resources as outlined [[#Resources][above]]. Then, simply run ~./main.py~ and everything should work. The resulting deck file will be written to ~out.apkg~.
 
 * Screenshots
-
 [[./images/question.png]]
-
 [[./images/answer.png]]
 
 * Reasoning
-I would like to expand upon the reasoning behind this deck. I have been a user of WaniKani for multiple years, and got about halfway throught the program. While I appreciate the service, I have come to dislike the concept of mnemonic-based learning for kanji in general. While that method works for a lot of people, I personally feel as if I rarely encountered situations where the mnemonic helped me remember a kanji I otherwise wouldn't have. The mnemonic system also completely ignores keisei formation, which accounts for the majority of kanji. These formations are the actual sematic connections between different kanji, and it seems counterintuitive to ignore these legitimate connections for false ones created solely for brute-force memorization. Also, by not learning the traditional names and types of kanji radicals, it impedes ones ability to discuss kanji with native speakers, or in Japanese in general. For all these reasons, I have decided to abandon mnemonic systems for learning kanji and switch to simpler methods while reinforcing kanji readings through actual encounters with the kanji in native material.
+I would like to expand upon the reasoning behind this deck. I have been using  a mnemonic-based kanji-learning system for multiple years, and have made good progress with it. However, I have come to dislike the concept of using mnemonics to learn kanji in general. The method seems to work for a lot of people, but I personally feel that I rarely encountered situations where a mnemonic helped me remember a kanji I otherwise wouldn't have.
+
+Mnemonic systems also usually ignore the keisei (phonetic-semantic) composition of the majority of kanji. This composition forms the actual sematic connections between characters, and it seems counterintuitive to discard them for false connections created only for memorization.
+
+Also, by not learning the traditional kanji radicals, it impedes one's ability to discuss kanji with native speakers, or in Japanese in general. That's why I decided to focus on a simpler style of learning kanji, which is the market this deck seeks to fill.
