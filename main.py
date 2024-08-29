@@ -90,7 +90,7 @@ if __name__ == '__main__':
                     word_list.append(f'{kanji_t}[{kana_t}]')
         random.shuffle(word_list)
 
-        ## Find readings/meanings of serach kanji
+        ## Find readings/meanings of search kanji
         reading_list_on = []
         reading_list_kun = []
         meaning_list = []
