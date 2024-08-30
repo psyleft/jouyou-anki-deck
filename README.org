@@ -1,6 +1,6 @@
 :PROPERTIES:
 :CREATED: [2024-08-28 Wed 17:00]
-:MODIFIED: [2024-08-28 Wed 19:33]
+:MODIFIED: [2024-08-30 Fri 17:54]
 :END:
 
 #+title: Jouyou Anki Deck
@@ -13,6 +13,8 @@ Simple Anki deck for jouyou kanji
 This repository contains the python script I used to generate my Anki deck containing flashcards for the 2136 jouyou kanji.
 
 My goal with this deck was to create simple, good-looking kanji flashcards without a ton of extra information. This deck does NOT contain information on RTK or any other mnemonic systems, but does contain information about the keisei radicals. The deck is ordered based on the frequency of each kanji in the Mainichi Sinbun, as provided by the Kanji Database. You can optionally display stroke orders on the answer side of the cards by downloading and installing the KanjiStrokeOrders font [[https://www.nihilist.org.uk][here]].
+
+The deck listing on AnkiWeb can be found [[https://ankiweb.net/shared/info/428597851][here]].
 
 * Resources
 The data used to generate the deck comes from three sources: the online [[https://www.kanjidatabase.com][Kanji Database]] and the [[https://github.com/scriptin/jmdict-simplified][jmdict-simplified]] versions of JMdict and Kanjidic2. If you want to build the deck yourself you can download the relevant files from the links above. Place them in the =resources/external/= folder under the correct names as specified in =main.py=.
