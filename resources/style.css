@@ -1,13 +1,22 @@
+@font-face {
+    font-family: noto-sans-jp;
+    src: local("Noto Sans JP");
+}
+
+@font-face {
+    font-family: kanji-stroke-orders;
+    src: local("KanjiStrokeOrders");
+    size-adjust: 200%;
+}
+
 .card {
-    font-family: Noto Sans JP;
+    font-family: noto-sans-jp;
     font-size: 20px;
     text-align: center;
     color: black;
     background-color: white;
 }
 
-@font-face {
-    font-family: stroke-orders;
-    src: local(KanjiStrokeOrders);
-    size-adjust: 200%;
+.stroke-orders {
+    font-family: kanji-stroke-orders;
 }
