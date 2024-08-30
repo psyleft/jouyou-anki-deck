@@ -13,6 +13,10 @@ kanji_database_path = './resources/external/kanji_database.csv'
 
 if __name__ == '__main__':
 
+    ## We want some seemingly random features, but need them to be consistent
+    ## across multiple deck generations
+    random.seed(80085)
+
     ## Read format/style resources to strings
     with open('./resources/qfmt.html', newline='') as f:
         kanji_qfmt = f.read()
